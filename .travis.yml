@@ -1,0 +1,12 @@
+language: scala
+scala:
+  - 2.12.1
+script: "sbt clean coverage test"
+after_success: "sbt coveralls"
+
+jdk:
+  - oraclejdk7
+  - oraclejdk8
+notifications:
+  email:
+    - lavender.flowerdew@gmail.com
